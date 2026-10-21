@@ -40,8 +40,8 @@ int test_traverse(const int *items, int count, int root_item) {
 int main() {
     int result = 0;
     // input sets from previous test
-    int set1[] = {2, 6, 4};
-    int set2[] = {5, 1, 3};
+    const int set1[] = {2, 6, 4};
+    const int set2[] = {5, 1, 3};
     printf("Tree 1 (root 4, items 2 6 4):\n");
     result += test_traverse(set1, 3, 4);
     printf("Tree 2 (root 4, items 5 1 3):\n");

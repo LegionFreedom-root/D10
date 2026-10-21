@@ -28,7 +28,7 @@ int test_add_door(void) {
     struct node *root = init(d0);
     if (root == NULL) return FAIL;
     struct node *n1 = add_door(root, d1);
-    struct node *n2 = add_door(n1, d2);
+    const struct node *n2 = add_door(n1, d2);
     if (n1 == NULL || n2 == NULL) {
         destroy(root);
         return FAIL;

@@ -35,12 +35,13 @@ int test_add_door(void) {
     }
     int res = SUCCESS;
     // list should be: 0 -> 1 -> 2
-    if (root->door.id != 0 || root->next != n1 || n1->door.id != 1 || n1->next != n2 || n2->door.id != 2 ||
-        n2->next != NULL) {
+    const struct node *cn2 = n2;
+    if (root->door.id != 0 || root->next != n1 || n1->door.id != 1 || n1->next != (struct node *)cn2 ||
+        cn2->door.id != 2 || cn2->next != NULL) {
         res = FAIL;
     }
     // find checks
-    if (find_door(2, root) != n2) res = FAIL;
+    if (find_door(2, root) != (struct node *)cn2) res = FAIL;
     if (find_door(5, root) != NULL) res = FAIL;
     destroy(root);
     printf("test_add_door: %s\n", res == SUCCESS ? "SUCCESS" : "FAIL");

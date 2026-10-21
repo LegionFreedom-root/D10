@@ -33,7 +33,7 @@ void build_tree(t_btree *root, const int *items, int count) {
 
 int test_insert_set1(void) {
     int res = SUCCESS;
-    int items[] = {2, 6, 4};
+    const int items[] = {2, 6, 4};
     t_btree *root = bstree_create_node(4);
     if (root == NULL) return FAIL;
     build_tree(root, items, 3);
@@ -48,7 +48,7 @@ int test_insert_set1(void) {
 
 int test_insert_set2(void) {
     int res = SUCCESS;
-    int items[] = {5, 1, 3};
+    const int items[] = {5, 1, 3};
     t_btree *root = bstree_create_node(4);
     if (root == NULL) return FAIL;
     build_tree(root, items, 3);

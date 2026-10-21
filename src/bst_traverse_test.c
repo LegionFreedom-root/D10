@@ -16,7 +16,7 @@ void build_tree(t_btree *root, const int *items, int count) {
     }
 }
 
-int test_traverse(int *items, int count, int root_item) {
+int test_traverse(const int *items, int count, int root_item) {
     t_btree *root = bstree_create_node(root_item);
     if (root == NULL) return FAIL;
     build_tree(root, items, count);

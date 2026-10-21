@@ -208,7 +208,9 @@ run_cppcheck() {
     local -a args=(--enable=all --error-exitcode=1 --inline-suppr)
     if [[ "${CCHECK_CPPCHECK_STRICT:-0}" != 1 ]]; then
         # Пофайловый анализ учебного проекта стабильно шумит этими проверками.
-        args+=(--suppress=unusedFunction --suppress=checkersReport --suppress=unmatchedSuppression)
+        args+=(--suppress=unusedFunction --suppress=checkersReport \
+            --suppress=unmatchedSuppression --suppress=unusedStructMember \
+            --suppress=missingIncludeSystem)
     # Если strict-режим ВЫКЛЮЧЕН (unusedFunction подавлен), мы можем безопасно использовать многопоточность
         command -v nproc >/dev/null 2>&1 && args+=(-j "$(nproc)")
     else

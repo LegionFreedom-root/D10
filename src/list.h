@@ -14,7 +14,7 @@ struct node *init(struct door door);
 // add new node after elem
 struct node *add_door(struct node *elem, struct door door);
 // find door in list by id
-struct node *find_door(int door_id, struct node *root);
+struct node *find_door(int door_id, const struct node *root);
 // remove elem from list, returns new root
 struct node *remove_door(struct node *elem, struct node *root);
 // free all list memory

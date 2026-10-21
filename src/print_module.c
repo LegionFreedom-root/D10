@@ -8,7 +8,7 @@ int print_char(char ch) { return putchar(ch); }
 
 void print_log(int (*print)(char), char *message) {
     time_t now = time(NULL);
-    struct tm *tm_now = localtime(&now);
+    const struct tm *tm_now = localtime(&now);
     // print log prefix
     for (int i = 0; LOG_PREFIX[i] != '\0'; i++) {
         print(LOG_PREFIX[i]);

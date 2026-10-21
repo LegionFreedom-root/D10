@@ -1,0 +1,4 @@
+unusedFunction
+unmatchedSuppression
+missingIncludeSystem
+checkersReport

@@ -14,7 +14,7 @@ int main() {
     int *availability_mask = check_available_documentation_module(validate, Documents_count, Documents);
     if (availability_mask == NULL) return 1;
 
-    char *documents[Documents_count] = {"Linked lists", "Queues", "Maps", "Binary Trees"};
+    const char *documents[Documents_count] = {"Linked lists", "Queues", "Maps", "Binary Trees"};
     for (int i = 0; i < Documents_count; i++) {
         printf("%-15s : %s\n", documents[i], availability_mask[i] ? "available" : "unavailable");
     }

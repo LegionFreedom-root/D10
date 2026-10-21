@@ -10,7 +10,7 @@ int cmpf(int a, int b) { return a - b; }
 
 void applyf(int item) { printf("%d ", item); }
 
-void build_tree(t_btree *root, int *items, int count) {
+void build_tree(t_btree *root, const int *items, int count) {
     for (int i = 0; i < count; i++) {
         bstree_insert(root, items[i], cmpf);
     }

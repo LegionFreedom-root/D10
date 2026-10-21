@@ -8,12 +8,12 @@
 
 #define MAX_DOCUMENTS 16
 
-int validate(char *data) {
+int validate(const char *data) {
     int validation_result = !strcmp(data, Available_document);
     return validation_result;
 }
 
-int *check_available_documentation_module(int (*validate)(char *), int document_count, ...) {
+int *check_available_documentation_module(int (*validate)(const char *), int document_count, ...) {
     if (validate == NULL || document_count <= 0) return NULL;
     int count = document_count;
     if (count > MAX_DOCUMENTS) count = MAX_DOCUMENTS;

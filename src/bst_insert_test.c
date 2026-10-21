@@ -8,7 +8,7 @@
 
 int cmpf(int a, int b) { return a - b; }
 
-void build_tree(t_btree *root, int *items, int count);
+void build_tree(t_btree *root, const int *items, int count);
 
 int test_insert_set1(void);
 int test_insert_set2(void);
@@ -25,7 +25,7 @@ int main() {
     return FAIL;
 }
 
-void build_tree(t_btree *root, int *items, int count) {
+void build_tree(t_btree *root, const int *items, int count) {
     for (int i = 0; i < count; i++) {
         bstree_insert(root, items[i], cmpf);
     }
@@ -53,9 +53,9 @@ int test_insert_set2(void) {
     if (root == NULL) return FAIL;
     build_tree(root, items, 3);
     // 5 -> right of 4, 1 -> left of 4, 3 -> right of 1
-    if (root->right == NULL || root->right->item != 5) res = FAIL;
-    if (root->left == NULL || root->left->item != 1) res = FAIL;
-    if (root->left->right == NULL || root->left->right->item != 3) res = FAIL;
+    if (root->right == NULL || root->right->item != 5) return FAIL;
+    if (root->left == NULL || root->left->item != 1) return FAIL;
+    if (root->left->right == NULL || root->left->right->item != 3) return FAIL;
     bstree_destroy(root);
     return res;
 }

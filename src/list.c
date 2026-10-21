@@ -21,10 +21,10 @@ struct node *add_door(struct node *elem, struct door door) {
     return new_node;
 }
 
-struct node *find_door(int door_id, struct node *root) {
-    struct node *cur = root;
+struct node *find_door(int door_id, const struct node *root) {
+    const struct node *cur = root;
     while (cur != NULL) {
-        if (cur->door.id == door_id) return cur;
+        if (cur->door.id == door_id) return (struct node *)cur;
         cur = cur->next;
     }
     return NULL;

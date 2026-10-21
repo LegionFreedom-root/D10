@@ -1,3 +1,4 @@
+/* stage: stack_test */
 #ifndef SRC_STACK_H_
 #define SRC_STACK_H_
 

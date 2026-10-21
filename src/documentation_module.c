@@ -1,3 +1,4 @@
+/* stage: documentation_module */
 #include "documentation_module.h"
 
 #include <stdarg.h>

@@ -1,3 +1,4 @@
+/* stage: door_struct */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

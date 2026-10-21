@@ -1,3 +1,4 @@
+/* stage: bst_create_test */
 #ifndef SRC_BST_H_
 #define SRC_BST_H_
 

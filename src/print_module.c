@@ -1,3 +1,4 @@
+/* stage: print_module */
 #include "print_module.h"
 
 #include <stdio.h>

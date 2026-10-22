@@ -14,10 +14,10 @@ int main() {
     result += test_add_door();
     result += test_remove_door();
     if (result == 0) {
-        printf("All tests: SUCCESS\n");
+        printf("All tests: SUCCESS");
         return SUCCESS;
     }
-    printf("Tests failed: FAIL\n");
+    printf("Tests failed: FAIL");
     return FAIL;
 }
 
@@ -44,7 +44,7 @@ int test_add_door(void) {
     if (find_door(2, root) != (struct node *)cn2) res = FAIL;
     if (find_door(5, root) != NULL) res = FAIL;
     destroy(root);
-    printf("test_add_door: %s\n", res == SUCCESS ? "SUCCESS" : "FAIL");
+    printf("test_add_door: %s", res == SUCCESS ? "SUCCESS" : "FAIL");
     return res;
 }
 
@@ -73,6 +73,6 @@ int test_remove_door(void) {
         res = FAIL;
     }
     destroy(root);
-    printf("test_remove_door: %s\n", res == SUCCESS ? "SUCCESS" : "FAIL");
+    printf("test_remove_door: %s", res == SUCCESS ? "SUCCESS" : "FAIL");
     return res;
 }

@@ -25,5 +25,4 @@ void print_log(int (*print)(char), char *message) {
     for (int i = 0; message[i] != '\0'; i++) {
         print(message[i]);
     }
-    print('\n');
 }

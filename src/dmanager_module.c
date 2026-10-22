@@ -20,7 +20,7 @@ int main() {
     close_doors(doors, DOORS_COUNT);
 
     for (int i = 0; i < DOORS_COUNT; i++) {
-        printf("%d, %d\n", doors[i].id, doors[i].status);
+        printf("%d, %d", doors[i].id, doors[i].status);
     }
 
     return 0;

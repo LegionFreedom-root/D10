@@ -5,7 +5,7 @@
 
 static void print_node(t_btree *node) {
     if (node == NULL) return;
-    printf("        %d\n", node->item);
+    printf("        %d", node->item);
     print_node(node->left);
     print_node(node->right);
 }
@@ -40,7 +40,7 @@ static int bstree_try_insert(t_btree *root, int item, int (*cmpf)(int, int)) {
 void bstree_insert(t_btree *root, int item, int (*cmpf)(int, int)) {
     if (root == NULL || cmpf == NULL) return;
     if (bstree_try_insert(root, item, cmpf)) {
-        printf("leaf %d inserted into tree:\n", item);
+        printf("leaf %d inserted into tree: ", item);
         print_node(root);
     }
 }

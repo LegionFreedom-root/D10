@@ -3,12 +3,16 @@
 #define SRC_STACK_H_
 
 struct stack_node {
+    // cppcheck-suppress unusedStructMember
     int value;
+    // cppcheck-suppress unusedStructMember
     struct stack_node *next;
 };
 
 struct stack {
+    // cppcheck-suppress unusedStructMember
     struct stack_node *top;
+    // cppcheck-suppress unusedStructMember
     int size;
 };
 

@@ -14,10 +14,10 @@ int main() {
     result += test_create_node(4);
     result += test_create_node(10);
     if (result == 0) {
-        printf("All tests: SUCCESS\n");
+        printf("All tests: SUCCESS");
         return SUCCESS;
     }
-    printf("Tests failed: FAIL\n");
+    printf("Tests failed: FAIL");
     return FAIL;
 }
 
@@ -27,7 +27,7 @@ int test_create_node(int item) {
     if (node == NULL) return FAIL;
     if (node->item != item) res = FAIL;
     if (node->left != NULL || node->right != NULL) res = FAIL;
-    printf("node created with item: %d\n", node->item);
+    printf("node created with item: %d", node->item);
     free(node);
     return res;
 }

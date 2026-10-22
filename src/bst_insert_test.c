@@ -18,10 +18,10 @@ int main() {
     result += test_insert_set1();
     result += test_insert_set2();
     if (result == 0) {
-        printf("All tests: SUCCESS\n");
+        printf("All tests: SUCCESS");
         return SUCCESS;
     }
-    printf("Tests failed: FAIL\n");
+    printf("Tests failed: FAIL");
     return FAIL;
 }
 

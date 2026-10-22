@@ -14,10 +14,10 @@ int main() {
     result += test_push();
     result += test_pop();
     if (result == 0) {
-        printf("All tests: SUCCESS\n");
+        printf("All tests: SUCCESS");
         return SUCCESS;
     }
-    printf("Tests failed: FAIL\n");
+    printf("Tests failed: FAIL");
     return FAIL;
 }
 
@@ -31,7 +31,7 @@ int test_push(void) {
     if (st->size != 3) res = FAIL;
     if (st->top == NULL || st->top->value != 30) res = FAIL;
     destroy(st);
-    printf("test_push: %s\n", res == SUCCESS ? "SUCCESS" : "FAIL");
+    printf("test_push: %s", res == SUCCESS ? "SUCCESS" : "FAIL");
     return res;
 }
 
@@ -52,6 +52,6 @@ int test_pop(void) {
     if (st->size != 0) res = FAIL;
     if (pop(st, &value) == 0) res = FAIL;
     destroy(st);
-    printf("test_pop: %s\n", res == SUCCESS ? "SUCCESS" : "FAIL");
+    printf("test_pop: %s", res == SUCCESS ? "SUCCESS" : "FAIL");
     return res;
 }

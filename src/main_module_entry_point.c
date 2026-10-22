@@ -16,7 +16,7 @@ int main() {
 
     const char *documents[Documents_count] = {"Linked lists", "Queues", "Maps", "Binary Trees"};
     for (int i = 0; i < Documents_count; i++) {
-        printf("%-15s : %s\n", documents[i], availability_mask[i] ? "available" : "unavailable");
+        printf("%-15s : %s", documents[i], availability_mask[i] ? "available" : "unavailable");
     }
 
     free(availability_mask);

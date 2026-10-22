@@ -1,4 +1,0 @@
-unusedFunction
-unmatchedSuppression
-missingIncludeSystem
-checkersReport

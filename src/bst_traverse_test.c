@@ -23,15 +23,12 @@ int test_traverse(const int *items, int count, int root_item) {
 
     printf("infix:   ");
     bstree_apply_infix(root, applyf);
-    printf("\n");
 
     printf("prefix:  ");
     bstree_apply_prefix(root, applyf);
-    printf("\n");
 
     printf("postfix: ");
     bstree_apply_postfix(root, applyf);
-    printf("\n");
 
     bstree_destroy(root);
     return SUCCESS;
@@ -42,14 +39,14 @@ int main() {
     // input sets from previous test
     const int set1[] = {2, 6, 4};
     const int set2[] = {5, 1, 3};
-    printf("Tree 1 (root 4, items 2 6 4):\n");
+    printf("Tree 1 (root 4, items 2 6 4): ");
     result += test_traverse(set1, 3, 4);
-    printf("Tree 2 (root 4, items 5 1 3):\n");
+    printf("Tree 2 (root 4, items 5 1 3): ");
     result += test_traverse(set2, 3, 4);
     if (result == 0) {
-        printf("All tests: SUCCESS\n");
+        printf("All tests: SUCCESS");
         return SUCCESS;
     }
-    printf("Tests failed: FAIL\n");
+    printf("Tests failed: FAIL");
     return FAIL;
 }
